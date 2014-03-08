@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Actions</key>
+    <array>
+      <dict>
+        <key>Service Name</key>
+        <string>tta_terms</string>
+        <key>Title</key>
+        <string>표준</string>
+      </dict>
+    </array>
+    <key>Regular Expression</key>
+    <string>[a-zA-Z0-9]+</string>
+    <key>Extension Identifier</key>
+    <string>com.marocchino.tta_terms.popclip.extension</string>
+    <key>Extension Name</key>
+    <string>tta_terms</string>
+  </dict>
+</plist>
