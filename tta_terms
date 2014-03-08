@@ -8,15 +8,15 @@ begin
   words_criteria = TtaTermsApi.list search: search
   words = words_criteria.map(&:to_word)
   File.open(html, "w:utf-8") do |f|
+    f.puts '<html><head><meta charset="utf-8"></head><body>'
     words.each do |word|
-      f.puts '<html><head><meta charset="utf-8"></head><body>'
       f.puts "<h1>#{word.name}</h1>" unless word.name.downcase == search
       f.puts "<h1>#{word.origin}</h1>" unless word.origin.downcase == search
       f.puts "<abbr>#{word.type}</abbr>"
       f.puts "<i>#{word.similar}</i>"
       f.puts "<p>#{word.description}</p>"
-      f.puts "</body></html>"
     end
+    f.puts "</body></html>"
   end
 rescue
   File.open(html, "w:utf-8") do |f|
